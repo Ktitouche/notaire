@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Prenez rendez-vous en ligne avec notre étude notariale. Choisissez votre créneau et obtenez une confirmation immédiate.">
+    <title>Prendre Rendez-vous - Étude Notariale | Réservation en Ligne</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-logo">
+                <span class="logo-icon">⚖️</span>
+                <h1>Étude Notariale</h1>
+            </div>
+
+            <button class="navbar-toggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="navbar-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À Propos</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="request.html">Demande de Document</a></li>
+                <li><a href="appointment.html">Rendez-vous</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero" style="min-height: 350px;">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1>Prendre Rendez-vous</h1>
+                <p class="hero-subtitle">
+                    Réservez votre consultation en quelques clics
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+                <div class="card fade-in">
+                    <div class="card-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3 class="card-title">Réservation Immédiate</h3>
+                    <p class="card-text">
+                        Choisissez votre créneau parmi les disponibilités et obtenez une confirmation instantanée par
+                        email.
+                    </p>
+                </div>
+
+                <div class="card fade-in">
+                    <div class="card-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 class="card-title">Rendez-vous Physique ou Visio</h3>
+                    <p class="card-text">
+                        Selon votre préférence, rencontrez-nous au cabinet ou via une consultation en visioconférence
+                        sécurisée.
+                    </p>
+                </div>
+
+                <div class="card fade-in">
+                    <div class="card-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3 class="card-title">Consultation Personnalisée</h3>
+                    <p class="card-text">
+                        Échange avec un notaire ou un collaborateur qualifié pour analyser votre situation et vous
+                        conseiller.
+                    </p>
+                </div>
+
+                <div class="card fade-in">
+                    <div class="card-icon">
+                        <i class="fas fa-bell"></i>
+                    </div>
+                    <h3 class="card-title">Rappel Automatique</h3>
+                    <p class="card-text">
+                        Recevez un rappel par email 24h avant votre rendez-vous avec les informations et documents à
+                        préparer.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Appointment Form Section -->
+    <section class="section">
+        <div class="container" style="max-width: 800px;">
+            <h2 class="section-title fade-in">Réserver Votre Rendez-vous</h2>
+
+            <form id="appointment-form" class="fade-in">
+                <!-- Personal Information -->
+                <div
+                    style="background-color: var(--off-white); padding: 2rem; border-radius: 10px; margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary-blue); margin-bottom: 1.5rem;">
+                        <i class="fas fa-user" style="color: var(--gold); margin-right: 10px;"></i>
+                        Vos Coordonnées
+                    </h3>
+
+                    <div class="form-group">
+                        <label for="civilite">Civilité *</label>
+                        <select id="civilite" name="civilite" required>
+                            <option value="">Sélectionnez</option>
+                            <option value="M.">Monsieur</option>
+                            <option value="Mme">Madame</option>
+                        </select>
+                        <div class="error-message">Veuillez sélectionner votre civilité</div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div class="form-group">
+                            <label for="prenom">Prénom *</label>
+                            <input type="text" id="prenom" name="prenom" required minlength="2"
+                                placeholder="Votre prénom">
+                            <div class="error-message">Ce champ est obligatoire</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nom">Nom *</label>
+                            <input type="text" id="nom" name="nom" required minlength="2" placeholder="Votre nom">
+                            <div class="error-message">Ce champ est obligatoire</div>
+                        </div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="votre.email@exemple.fr">
+                            <div class="error-message">Veuillez entrer une adresse e-mail valide</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telephone">Téléphone *</label>
+                            <input type="tel" id="telephone" name="telephone" required placeholder="01 23 45 67 89">
+                            <div class="error-message">Veuillez entrer un numéro de téléphone valide</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Appointment Details -->
+                <div
+                    style="background-color: var(--off-white); padding: 2rem; border-radius: 10px; margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary-blue); margin-bottom: 1.5rem;">
+                        <i class="fas fa-calendar-alt" style="color: var(--gold); margin-right: 10px;"></i>
+                        Date et Heure du Rendez-vous
+                    </h3>
+
+                    <div class="form-group">
+                        <label for="date">Date Souhaitée *</label>
+                        <input type="date" id="date" name="date" required>
+                        <div class="error-message">Veuillez sélectionner une date</div>
+                        <p style="font-size: 0.9rem; color: var(--gray); margin-top: 0.5rem;">
+                            <i class="fas fa-info-circle"></i> Rendez-vous disponibles du lundi au vendredi
+                        </p>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="time">Horaire Souhaité *</label>
+                        <select id="time" name="time" required>
+                            <option value="">Sélectionnez une heure</option>
+                            <!-- Time slots will be generated by JavaScript -->
+                        </select>
+                        <div class="error-message">Veuillez sélectionner un horaire</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="type_rdv">Type de Rendez-vous *</label>
+                        <select id="type_rdv" name="type_rdv" required>
+                            <option value="">Sélectionnez le type</option>
+                            <option value="cabinet">Au cabinet (présentiel)</option>
+                            <option value="visio">En visioconférence</option>
+                            <option value="telephonique">Entretien téléphonique</option>
+                        </select>
+                        <div class="error-message">Veuillez sélectionner un type de rendez-vous</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="duree">Durée Estimée</label>
+                        <select id="duree" name="duree">
+                            <option value="30">30 minutes</option>
+                            <option value="60" selected>1 heure</option>
+                            <option value="90">1 heure 30</option>
+                            <option value="120">2 heures</option>
+                        </select>
+                        <p style="font-size: 0.9rem; color: var(--gray); margin-top: 0.5rem;">
+                            Si vous n'êtes pas certain, sélectionnez 1 heure. Nous ajusterons si nécessaire.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Reason for Appointment -->
+                <div
+                    style="background-color: var(--off-white); padding: 2rem; border-radius: 10px; margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary-blue); margin-bottom: 1.5rem;">
+                        <i class="fas fa-clipboard-list" style="color: var(--gold); margin-right: 10px;"></i>
+                        Objet du Rendez-vous
+                    </h3>
+
+                    <div class="form-group">
+                        <label for="motif">Motif de la Consultation *</label>
+                        <select id="motif" name="motif" required>
+                            <option value="">Sélectionnez un motif</option>
+                            <optgroup label="Immobilier">
+                                <option value="achat_vente">Projet d'achat ou vente immobilière</option>
+                                <option value="pret">Prêt immobilier / Hypothèque</option>
+                                <option value="copropriete">Question de copropriété</option>
+                            </optgroup>
+                            <optgroup label="Succession et Donation">
+                                <option value="succession">Succession</option>
+                                <option value="testament">Testament</option>
+                                <option value="donation">Donation</option>
+                            </optgroup>
+                            <optgroup label="Famille">
+                                <option value="mariage">Mariage / Contrat de mariage</option>
+                                <option value="pacs">PACS</option>
+                                <option value="separation">Séparation / Divorce</option>
+                            </optgroup>
+                            <optgroup label="Société">
+                                <option value="creation_societe">Création d'entreprise</option>
+                                <option value="cession">Cession de parts</option>
+                                <option value="vie_sociale">Vie sociale de l'entreprise</option>
+                            </optgroup>
+                            <optgroup label="Autre">
+                                <option value="authentification">Authentification de documents</option>
+                                <option value="conseil">Conseil juridique général</option>
+                                <option value="autre">Autre motif</option>
+                            </optgroup>
+                        </select>
+                        <div class="error-message">Veuillez sélectionner le motif de votre consultation</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="details">Détails et Questions</label>
+                        <textarea id="details" name="details" rows="5"
+                            placeholder="Décrivez brièvement votre situation et les questions que vous souhaitez aborder lors du rendez-vous. Cela nous permettra de mieux vous préparer."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notaire_pref">Préférence de Notaire (optionnel)</label>
+                        <select id="notaire_pref" name="notaire_pref">
+                            <option value="">Pas de préférence</option>
+                            <option value="durand">Maître Pierre Durand</option>
+                            <option value="laurent">Maître Sophie Laurent</option>
+                            <option value="moreau">Maître Thomas Moreau</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="premier_rdv" value="oui" style="margin-right: 8px;">
+                            C'est mon premier rendez-vous avec un notaire
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="dossier_existant" value="oui" style="margin-right: 8px;">
+                            J'ai déjà un dossier en cours dans votre étude
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Additional Information -->
+                <div
+                    style="background-color: var(--off-white); padding: 2rem; border-radius: 10px; margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary-blue); margin-bottom: 1.5rem;">
+                        <i class="fas fa-info-circle" style="color: var(--gold); margin-right: 10px;"></i>
+                        Informations Complémentaires
+                    </h3>
+
+                    <div class="form-group">
+                        <label for="commentaires">Commentaires ou Demandes Particulières</label>
+                        <textarea id="commentaires" name="commentaires" rows="3"
+                            placeholder="Besoin d'accessibilité, accompagnement d'une tierce personne, interprète, etc."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="rappel_email" value="oui" checked style="margin-right: 8px;">
+                            Recevoir un rappel par email 24h avant le rendez-vous
+                        </label>
+                    </div>
+
+                    <div class="form-group">
+                        <label>
+                            <input type="checkbox" name="rappel_sms" value="oui" style="margin-right: 8px;">
+                            Recevoir un rappel par SMS
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Important Notice -->
+                <div
+                    style="background-color: #fff3cd; border-left: 4px solid var(--warning); padding: 1.5rem; border-radius: 5px; margin-bottom: 2rem;">
+                    <h4 style="color: var(--dark-gray); margin-bottom: 1rem;">
+                        <i class="fas fa-exclamation-triangle" style="color: var(--warning); margin-right: 8px;"></i>
+                        Informations Importantes
+                    </h4>
+                    <ul style="margin: 0; padding-left: 1.5rem; color: var(--dark-gray);">
+                        <li>En cas d'empêchement, merci de nous prévenir au moins 24h à l'avance</li>
+                        <li>Veuillez arriver 5 minutes avant l'heure du rendez-vous</li>
+                        <li>Pensez à apporter vos pièces d'identité et documents relatifs à votre dossier</li>
+                        <li>Pour les visioconférences, un lien de connexion vous sera envoyé par email</li>
+                    </ul>
+                </div>
+
+                <!-- RGPD Consent -->
+                <div
+                    style="background-color: var(--light-gray); padding: 1.5rem; border-radius: 5px; margin-bottom: 2rem; font-size: 0.9rem;">
+                    <p style="margin: 0;">
+                        <i class="fas fa-lock" style="color: var(--gold); margin-right: 5px;"></i>
+                        En soumettant ce formulaire, vous acceptez que vos données personnelles soient utilisées pour
+                        la gestion de votre rendez-vous. Conformément au RGPD, vous disposez d'un droit d'accès,
+                        de rectification et de suppression de vos données.
+                    </p>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary" style="padding: 1rem 3rem; font-size: 1.1rem;">
+                        <i class="fas fa-calendar-check" style="margin-right: 10px;"></i>
+                        Confirmer Mon Rendez-vous
+                    </button>
+                </div>
+
+                <p class="text-center" style="margin-top: 1.5rem; color: var(--gray); font-size: 0.9rem;">
+                    <i class="fas fa-info-circle" style="color: var(--gold);"></i>
+                    Vous recevrez une confirmation par email dans les minutes suivantes
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="section-title fade-in">Questions Fréquentes</h2>
+            <div class="cards-grid">
+                <div class="card fade-in">
+                    <h4 style="color: var(--primary-blue); margin-bottom: 1rem;">
+                        <i class="fas fa-question-circle" style="color: var(--gold); margin-right: 8px;"></i>
+                        Dois-je payer pour une première consultation ?
+                    </h4>
+                    <p style="margin: 0;">
+                        La première consultation de 30 minutes peut être gratuite selon la nature de votre demande.
+                        N'hésitez pas à nous le demander lors de la prise de rendez-vous.
+                    </p>
+                </div>
+
+                <div class="card fade-in">
+                    <h4 style="color: var(--primary-blue); margin-bottom: 1rem;">
+                        <i class="fas fa-question-circle" style="color: var(--gold); margin-right: 8px;"></i>
+                        Quels documents apporter ?
+                    </h4>
+                    <p style="margin: 0;">
+                        Apportez votre pièce d'identité et tous les documents relatifs à votre dossier
+                        (contrats, actes, courriers, etc.). Une liste personnalisée vous sera envoyée après
+                        confirmation.
+                    </p>
+                </div>
+
+                <div class="card fade-in">
+                    <h4 style="color: var(--primary-blue); margin-bottom: 1rem;">
+                        <i class="fas fa-question-circle" style="color: var(--gold); margin-right: 8px;"></i>
+                        Puis-je annuler ou modifier mon rendez-vous ?
+                    </h4>
+                    <p style="margin: 0;">
+                        Oui, contactez-nous par téléphone ou email au moins 24h à l'avance.
+                        Nous ferons notre possible pour vous proposer un nouveau créneau.
+                    </p>
+                </div>
+
+                <div class="card fade-in">
+                    <h4 style="color: var(--primary-blue); margin-bottom: 1rem;">
+                        <i class="fas fa-question-circle" style="color: var(--gold); margin-right: 8px;"></i>
+                        Les rendez-vous en visio sont-ils sécurisés ?
+                    </h4>
+                    <p style="margin: 0;">
+                        Oui, nous utilisons des plateformes de visioconférence sécurisées et conformes au RGPD
+                        pour garantir la confidentialité de nos échanges.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alternative Contact -->
+    <section class="section">
+        <div class="container text-center">
+            <h2 class="fade-in">Besoin d'Aide pour Prendre Rendez-vous ?</h2>
+            <p class="fade-in"
+                style="font-size: 1.1rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Notre équipe est disponible pour vous aider à planifier votre consultation
+            </p>
+            <div class="fade-in" style="font-size: 2rem; color: var(--gold); font-weight: bold; margin-bottom: 1rem;">
+                <i class="fas fa-phone"></i> 01 23 45 67 89
+            </div>
+            <p class="fade-in" style="margin-bottom: 2rem;">
+                Du lundi au vendredi : 9h00 - 12h30 | 14h00 - 18h00
+            </p>
+            <a href="contact.html" class="btn btn-secondary fade-in">Ou envoyez-nous un message</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- About Footer Section -->
+                <div class="footer-section">
+                    <h3>Étude Notariale</h3>
+                    <p>
+                        Votre partenaire de confiance pour tous vos actes juridiques depuis 1998.
+                        Expertise, professionnalisme et proximité au service de vos projets.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h3>Liens Rapides</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="about.html">À Propos</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="request.html">Demande de Document</a></li>
+                        <li><a href="appointment.html">Rendez-vous</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>
+                        <i class="fas fa-map-marker-alt" style="color: var(--gold); margin-right: 8px;"></i>
+                        123 Avenue de la République<br>
+                        75001 Paris, France
+                    </p>
+                    <p>
+                        <i class="fas fa-phone" style="color: var(--gold); margin-right: 8px;"></i>
+                        01 23 45 67 89
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope" style="color: var(--gold); margin-right: 8px;"></i>
+                        contact@etude-notariale.fr
+                    </p>
+                </div>
+
+                <!-- Office Hours -->
+                <div class="footer-section">
+                    <h3>Horaires</h3>
+                    <p>
+                        <strong>Lundi - Vendredi</strong><br>
+                        9h00 - 12h30<br>
+                        14h00 - 18h00
+                    </p>
+                    <p>
+                        <strong>Samedi</strong><br>
+                        Sur rendez-vous uniquement
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Étude Notariale. Tous droits réservés. | <a href="#">Mentions Légales</a> | <a
+                        href="#">Politique de Confidentialité</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

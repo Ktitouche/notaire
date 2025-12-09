@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Faites votre demande de document en ligne. Notre étude notariale traite votre demande rapidement et en toute confidentialité.">
+    <title>Demande de Document - Étude Notariale | Formulaire en Ligne</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbar-logo">
+                <span class="logo-icon">⚖️</span>
+                <h1>Étude Notariale</h1>
+            </div>
+
+            <button class="navbar-toggle" aria-label="Toggle navigation menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <ul class="navbar-menu">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="about.html">À Propos</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="request.html">Demande de Document</a></li>
+                <li><a href="appointment.html">Rendez-vous</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="hero" style="min-height: 350px;">
+        <div class="container">
+            <div class="hero-content fade-in">
+                <h1>Demande de Document</h1>
+                <p class="hero-subtitle">
+                    Effectuez votre demande en ligne, nous vous recontactons rapidement
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Information Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));">
+                <div class="card fade-in">
+                    <div class="card-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3 class="card-title">Traitement Rapide</h3>
+                    <p class="card-text">
+                        Votre demande est traitée dans les 24h ouvrées. Nous vous recontactons rapidement
+                        pour confirmer et planifier les prochaines étapes.
+                    </p>
+                </div>
+
+                <div class="card fade-in">
+                    <div class="card-icon">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3 class="card-title">Sécurité et Confidentialité</h3>
+                    <p class="card-text">
+                        Vos informations sont traitées en toute confidentialité et conformément au RGPD.
+                        Le secret professionnel du notaire protège vos données.
+                    </p>
+                </div>
+
+                <div class="card fade-in">
+                    <div class="card-icon">
+                        <i class="fas fa-user-check"></i>
+                    </div>
+                    <h3 class="card-title">Accompagnement Personnalisé</h3>
+                    <p class="card-text">
+                        Un membre de notre équipe vous contacte pour comprendre vos besoins et vous guider
+                        dans l'établissement de votre document.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Request Form Section -->
+    <section class="section">
+        <div class="container" style="max-width: 800px;">
+            <h2 class="section-title fade-in">Formulaire de Demande</h2>
+
+            <form id="request-form" class="fade-in">
+                <!-- Personal Information -->
+                <div
+                    style="background-color: var(--off-white); padding: 2rem; border-radius: 10px; margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary-blue); margin-bottom: 1.5rem;">
+                        <i class="fas fa-user" style="color: var(--gold); margin-right: 10px;"></i>
+                        Informations Personnelles
+                    </h3>
+
+                    <div class="form-group">
+                        <label for="civilite">Civilité *</label>
+                        <select id="civilite" name="civilite" required>
+                            <option value="">Sélectionnez</option>
+                            <option value="M.">Monsieur</option>
+                            <option value="Mme">Madame</option>
+                        </select>
+                        <div class="error-message">Veuillez sélectionner votre civilité</div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div class="form-group">
+                            <label for="prenom">Prénom *</label>
+                            <input type="text" id="prenom" name="prenom" required minlength="2"
+                                placeholder="Votre prénom">
+                            <div class="error-message">Ce champ est obligatoire</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="nom">Nom *</label>
+                            <input type="text" id="nom" name="nom" required minlength="2" placeholder="Votre nom">
+                            <div class="error-message">Ce champ est obligatoire</div>
+                        </div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required placeholder="votre.email@exemple.fr">
+                            <div class="error-message">Veuillez entrer une adresse e-mail valide</div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="telephone">Téléphone *</label>
+                            <input type="tel" id="telephone" name="telephone" required placeholder="01 23 45 67 89">
+                            <div class="error-message">Veuillez entrer un numéro de téléphone valide</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="adresse">Adresse</label>
+                        <input type="text" id="adresse" name="adresse" placeholder="Numéro et nom de rue">
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 2fr; gap: 1rem;">
+                        <div class="form-group">
+                            <label for="code_postal">Code Postal</label>
+                            <input type="text" id="code_postal" name="code_postal" placeholder="75001">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="ville">Ville</label>
+                            <input type="text" id="ville" name="ville" placeholder="Paris">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Request Details -->
+                <div
+                    style="background-color: var(--off-white); padding: 2rem; border-radius: 10px; margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary-blue); margin-bottom: 1.5rem;">
+                        <i class="fas fa-file-alt" style="color: var(--gold); margin-right: 10px;"></i>
+                        Nature de Votre Demande
+                    </h3>
+
+                    <div class="form-group">
+                        <label for="type_document">Type de Document / Acte *</label>
+                        <select id="type_document" name="type_document" required>
+                            <option value="">Sélectionnez le type de document</option>
+                            <optgroup label="Immobilier">
+                                <option value="achat_immobilier">Achat immobilier</option>
+                                <option value="vente_immobilier">Vente immobilier</option>
+                                <option value="pret_immobilier">Prêt immobilier / Hypothèque</option>
+                                <option value="compromis_vente">Compromis de vente</option>
+                            </optgroup>
+                            <optgroup label="Succession et Donation">
+                                <option value="succession">Règlement de succession</option>
+                                <option value="testament">Testament</option>
+                                <option value="donation">Donation</option>
+                                <option value="donation_partage">Donation-partage</option>
+                            </optgroup>
+                            <optgroup label="Famille">
+                                <option value="contrat_mariage">Contrat de mariage</option>
+                                <option value="changement_regime">Changement de régime matrimonial</option>
+                                <option value="pacs">PACS</option>
+                                <option value="divorce">Divorce - Liquidation</option>
+                            </optgroup>
+                            <optgroup label="Société">
+                                <option value="creation_societe">Création de société</option>
+                                <option value="cession_parts">Cession de parts sociales</option>
+                                <option value="statuts_societe">Modification de statuts</option>
+                            </optgroup>
+                            <optgroup label="Authentification">
+                                <option value="certification">Certification de signature</option>
+                                <option value="copie_conforme">Copie conforme</option>
+                                <option value="procuration">Procuration</option>
+                            </optgroup>
+                            <optgroup label="Autre">
+                                <option value="autre">Autre demande</option>
+                            </optgroup>
+                        </select>
+                        <div class="error-message">Veuillez sélectionner un type de document</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="urgence">Degré d'Urgence</label>
+                        <select id="urgence" name="urgence">
+                            <option value="normale">Normale</option>
+                            <option value="urgente">Urgente (sous 1 semaine)</option>
+                            <option value="tres_urgente">Très urgente (sous 48h)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Description de Votre Demande *</label>
+                        <textarea id="message" name="message" required minlength="20"
+                            placeholder="Décrivez votre situation et votre demande de manière détaillée. Plus votre description est précise, mieux nous pourrons vous orienter et préparer votre dossier."></textarea>
+                        <div class="error-message">Veuillez décrire votre demande (minimum 20 caractères)</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="documents_disponibles">Documents en Votre Possession</label>
+                        <textarea id="documents_disponibles" name="documents_disponibles" rows="3"
+                            placeholder="Listez les documents que vous possédez déjà en lien avec votre demande (ex: promesse de vente, pièces d'identité, justificatifs de propriété, etc.)"></textarea>
+                    </div>
+                </div>
+
+                <!-- Availability -->
+                <div
+                    style="background-color: var(--off-white); padding: 2rem; border-radius: 10px; margin-bottom: 2rem;">
+                    <h3 style="color: var(--primary-blue); margin-bottom: 1.5rem;">
+                        <i class="fas fa-calendar-check" style="color: var(--gold); margin-right: 10px;"></i>
+                        Vos Disponibilités
+                    </h3>
+
+                    <div class="form-group">
+                        <label for="mode_contact">Mode de Contact Préféré</label>
+                        <select id="mode_contact" name="mode_contact">
+                            <option value="telephone">Téléphone</option>
+                            <option value="email">Email</option>
+                            <option value="rdv">Rendez-vous physique</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="disponibilites">Vos Disponibilités pour un Échange</label>
+                        <textarea id="disponibilites" name="disponibilites" rows="3"
+                            placeholder="Indiquez vos disponibilités (jours et horaires) pour que nous puissions vous contacter ou planifier un rendez-vous"></textarea>
+                    </div>
+                </div>
+
+                <!-- RGPD Consent -->
+                <div
+                    style="background-color: var(--light-gray); padding: 1.5rem; border-radius: 5px; margin-bottom: 2rem; font-size: 0.9rem;">
+                    <p style="margin-bottom: 1rem;">
+                        <strong>Protection de vos données personnelles</strong>
+                    </p>
+                    <p style="margin-bottom: 1rem;">
+                        Les informations recueillies sur ce formulaire sont enregistrées dans un fichier informatisé par
+                        l'Étude Notariale
+                        pour le traitement de votre demande. Elles sont conservées pendant 3 ans et sont destinées
+                        uniquement à notre service.
+                    </p>
+                    <p style="margin: 0;">
+                        Conformément au RGPD, vous disposez d'un droit d'accès, de rectification et de suppression de
+                        vos données.
+                        Pour exercer ces droits, contactez-nous à : contact@etude-notariale.fr
+                    </p>
+                </div>
+
+                <!-- Submit Button -->
+                <div class="text-center">
+                    <button type="submit" class="btn btn-primary" style="padding: 1rem 3rem; font-size: 1.1rem;">
+                        <i class="fas fa-paper-plane" style="margin-right: 10px;"></i>
+                        Envoyer Ma Demande
+                    </button>
+                </div>
+
+                <p class="text-center" style="margin-top: 1.5rem; color: var(--gray); font-size: 0.9rem;">
+                    <i class="fas fa-info-circle" style="color: var(--gold);"></i>
+                    Les champs marqués d'un astérisque (*) sont obligatoires
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Additional Information Section -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="section-title fade-in">Après Votre Demande</h2>
+            <div class="cards-grid">
+                <div class="card fade-in">
+                    <div
+                        style="background-color: var(--gold); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">
+                        1</div>
+                    <h3 class="card-title">Accusé de Réception</h3>
+                    <p class="card-text">
+                        Vous recevez immédiatement un email confirmant la réception de votre demande avec un numéro de
+                        dossier.
+                    </p>
+                </div>
+
+                <div class="card fade-in">
+                    <div
+                        style="background-color: var(--gold); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">
+                        2</div>
+                    <h3 class="card-title">Analyse de Votre Dossier</h3>
+                    <p class="card-text">
+                        Notre équipe analyse votre demande et vous contacte sous 24h pour échanger sur vos besoins et
+                        vous informer de la suite.
+                    </p>
+                </div>
+
+                <div class="card fade-in">
+                    <div
+                        style="background-color: var(--gold); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">
+                        3</div>
+                    <h3 class="card-title">Rendez-vous</h3>
+                    <p class="card-text">
+                        Un rendez-vous est planifié avec le notaire pour établir votre acte. Tous les documents
+                        nécessaires vous sont communiqués.
+                    </p>
+                </div>
+
+                <div class="card fade-in">
+                    <div
+                        style="background-color: var(--gold); color: white; width: 50px; height: 50px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: bold; margin-bottom: 1rem;">
+                        4</div>
+                    <h3 class="card-title">Réalisation de l'Acte</h3>
+                    <p class="card-text">
+                        Votre acte est préparé, relu et signé. Toutes les formalités légales sont accomplies pour
+                        sécuriser votre opération.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Alternative Contact Section -->
+    <section class="section">
+        <div class="container text-center">
+            <h2 class="fade-in">Vous Préférez Nous Appeler ?</h2>
+            <p class="fade-in"
+                style="font-size: 1.1rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                Notre secrétariat est à votre écoute du lundi au vendredi de 9h à 18h
+            </p>
+            <div class="fade-in" style="font-size: 2rem; color: var(--gold); font-weight: bold; margin-bottom: 1rem;">
+                <i class="fas fa-phone"></i> 01 23 45 67 89
+            </div>
+            <p class="fade-in" style="margin-bottom: 2rem;">
+                <a href="mailto:contact@etude-notariale.fr" style="color: var(--primary-blue); font-weight: 600;">
+                    <i class="fas fa-envelope"></i> contact@etude-notariale.fr
+                </a>
+            </p>
+            <a href="appointment.html" class="btn btn-secondary fade-in">Ou prenez rendez-vous en ligne</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <!-- About Footer Section -->
+                <div class="footer-section">
+                    <h3>Étude Notariale</h3>
+                    <p>
+                        Votre partenaire de confiance pour tous vos actes juridiques depuis 1998.
+                        Expertise, professionnalisme et proximité au service de vos projets.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h3>Liens Rapides</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="about.html">À Propos</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="request.html">Demande de Document</a></li>
+                        <li><a href="appointment.html">Rendez-vous</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>
+                        <i class="fas fa-map-marker-alt" style="color: var(--gold); margin-right: 8px;"></i>
+                        123 Avenue de la République<br>
+                        75001 Paris, France
+                    </p>
+                    <p>
+                        <i class="fas fa-phone" style="color: var(--gold); margin-right: 8px;"></i>
+                        01 23 45 67 89
+                    </p>
+                    <p>
+                        <i class="fas fa-envelope" style="color: var(--gold); margin-right: 8px;"></i>
+                        contact@etude-notariale.fr
+                    </p>
+                </div>
+
+                <!-- Office Hours -->
+                <div class="footer-section">
+                    <h3>Horaires</h3>
+                    <p>
+                        <strong>Lundi - Vendredi</strong><br>
+                        9h00 - 12h30<br>
+                        14h00 - 18h00
+                    </p>
+                    <p>
+                        <strong>Samedi</strong><br>
+                        Sur rendez-vous uniquement
+                    </p>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Étude Notariale. Tous droits réservés. | <a href="#">Mentions Légales</a> | <a
+                        href="#">Politique de Confidentialité</a></p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
