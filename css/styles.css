@@ -414,7 +414,8 @@ img {
 .hero-subtitle {
     font-size: 1.25rem;
     margin-bottom: var(--spacing-lg);
-    opacity: 0.95;
+    opacity: 1;
+    color: var(--white);
     line-height: 1.6;
 }
 
@@ -748,6 +749,14 @@ img {
 .contact-info h3 {
     color: var(--white);
     margin-bottom: var(--spacing-md);
+}
+
+.contact-info p {
+    color: var(--white);
+}
+
+.contact-info h4 {
+    color: var(--gold);
 }
 
 .contact-item {
